@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch bulb</title>
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            width: 20%;
+        }
+    </style>
+</head>
+<body style="background-image: url(anjaliimg.jpg);">
+    <img id="bulb" src="offbulbimg.jpg" alt=" " class="center">
+  <button id="togglebtn" class="center">turn on</button>  
+  <script>
+    let btn = document.getElementById('togglebtn')
+    let bulb = document.getElementById('bulb')
+    document.addEventListener('click', togglebulb)
+    function togglebulb(e){
+        if(btn.textContent.includes('on')){
+        bulb.src = "lightimg.jpg"
+        btn.textContent = "turn off" 
+    }else{
+        bulb.src = "offbulbimg.jpg"
+        btn.textContent = "turn on" 
+
+    }
+}
+  </script>
+</body>
+</html>
